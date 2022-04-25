@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LavaLifeDBModelStoreContainer" CdmEntityContainer="LavaLifeDBEntities">
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="LavaLifeDBModel.Message">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="RefMsg" ColumnName="RefMsg" />
+          <ScalarProperty Name="MsgSender" ColumnName="MsgSender" />
+          <ScalarProperty Name="MsgReceiver" ColumnName="MsgReceiver" />
+          <ScalarProperty Name="MsgContent" ColumnName="MsgContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="LavaLifeDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserBirthDate" ColumnName="UserBirthDate" />
+          <ScalarProperty Name="UserRace" ColumnName="UserRace" />
+          <ScalarProperty Name="UserCity" ColumnName="UserCity" />
+          <ScalarProperty Name="UserLang" ColumnName="UserLang" />
+          <ScalarProperty Name="UserPhoto" ColumnName="UserPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

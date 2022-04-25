@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LavaLifeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="RefMsg" />
+    </Key>
+    <Property Name="RefMsg" Type="int" Nullable="false" />
+    <Property Name="MsgSender" Type="nvarchar" MaxLength="50" />
+    <Property Name="MsgReceiver" Type="nvarchar" MaxLength="50" />
+    <Property Name="MsgContent" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserEmail" />
+    </Key>
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserGender" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserBirthDate" Type="date" />
+    <Property Name="UserRace" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserLang" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserPhoto" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="LavaLifeDBModelStoreContainer">
+    <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

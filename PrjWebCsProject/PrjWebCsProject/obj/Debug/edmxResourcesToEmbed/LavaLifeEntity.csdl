@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LavaLifeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="RefMsg" />
+    </Key>
+    <Property Name="RefMsg" Type="Int32" Nullable="false" />
+    <Property Name="MsgSender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MsgReceiver" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MsgContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserEmail" />
+    </Key>
+    <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserGender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserBirthDate" Type="DateTime" Precision="0" />
+    <Property Name="UserRace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserLang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="LavaLifeDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Messages" EntityType="Self.Message" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>
